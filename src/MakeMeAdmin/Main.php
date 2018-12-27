@@ -1,33 +1,5 @@
 <?php
-# MADE BY:
-#  __    __                                          __        __  __  __                     
-# /  |  /  |                                        /  |      /  |/  |/  |                    
-# $$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
-# $$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
-#  $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
-#   $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
-#  $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |
-# $$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
-# $$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
-#                                         $$ |                                      /  \__$$ |
-#                                         $$ |                                      $$    $$/ 
-#                                         $$/                                        $$$$$$/           
-# Editied By:
-#
-#            /$$   /$$                                        
-#           | $$  /$$/                                        
-#   /$$$$$$ | $$ /$$/   /$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$ 
-#  /$$__  $$| $$$$$/   /$$__  $$|____ /$$/ |____  $$| $$__  $$
-# | $$  \ $$| $$  $$  | $$  \ $$   /$$$$/   /$$$$$$$| $$  \ $$
-# | $$  | $$| $$\  $$ | $$  | $$  /$$__/   /$$__  $$| $$  | $$
-# |  $$$$$$/| $$ \  $$|  $$$$$$$ /$$$$$$$$|  $$$$$$$| $$  | $$
-#  \______/ |__/  \__/ \____  $$|________/ \_______/|__/  |__/
-#                           | $$                              
-#                           | $$                              
-#                           |__/                              
-
 namespace MakeMeAdmin;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
@@ -39,21 +11,15 @@ use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
-
 use jojoe77777\FormAPI;
-use jojoe77777\FormAPI\SimpleForm;
-
 class Main extends PluginBase implements Listener{
-
     private $config;
-
     public function onLoad(){
         $this->saveDefaultConfig();
         $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
         $this->config->getAll();
         $this->getLogger()->info("§eMakeMeAdmin by §6Xenophilicy §eis loading...");
     }
-
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("§6MakeMeAdmin§a has been enabled!");
@@ -68,11 +34,9 @@ class Main extends PluginBase implements Listener{
             $this->getServer()->getPluginManager()->disablePlugin($this);
         }
     }
-
     public function onDisable(){
         $this->getLogger()->info("§6MakeMeAdmin§c has been disabled!");   
     }
-
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         if($sender->hasPermission("makemeadmin.use.ui")) {
             if ($sender instanceof Player){
@@ -103,7 +67,6 @@ class Main extends PluginBase implements Listener{
         }
         return true;
     }
-
     public function removeColor($string){
         $string = str_replace('§0', '', $string);
         $string = str_replace('§1', '', $string);
@@ -129,7 +92,6 @@ class Main extends PluginBase implements Listener{
         $string = str_replace('§r', '', $string);
         return $string;
     }
-
     public function rankOptions($player){
         $formapi = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
         $form = new SimpleForm(function (Player $player, $data){
