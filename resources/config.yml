@@ -1,42 +1,4 @@
-# MADE BY:
-#   __    __                                          __        __  __  __                     
-#  /  |  /  |                                        /  |      /  |/  |/  |                    
-#  $$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
-#  $$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
-#   $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
-#    $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
-#  $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |#
-#  $$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
-#  $$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
-#                                        $$ |                                      /  \__$$ |
-#                                        $$ |                                      $$    $$/ 
-#                                        $$/                                        $$$$$$/  
-
-# Command used to change groups (Leave default for PurePerms)
 group_command: "setgroup"
-
-# Each rank has a label and alias:
-# Label → The label will be the text you see in the UI
-# Alias → The alias is the name of the group in your groups.yml file
-
-# You can use '§' in the labels for colors and effects to show up on the UI
-
 rank1:
-  label: "§l§6Owner"
-  alias: "owr"
-
-rank2:
-  label: "§l§4Admin"
-  alias: "adm"
-
-rank3:
-  label: "§l§9Moderator"
-  alias: "mod"
-
-rank4:
-  label: "§l§eHelper"
-  alias: "hlp"
-
-rank5:
-  label: "§l§aGuest"
-  alias: "gst"
+  label: "Owner"
+  alias: "Owner"
