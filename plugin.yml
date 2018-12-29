@@ -15,27 +15,27 @@ commands:
     permission: makemeadmin.use.about
 permissions:
   makemeadmin.use:
-    default: true
+    default: op
     children:
         makemeadmin.use.1:
           children:
             makemeadmin.use.ui:
-            default: true
+            default: op
         makemeadmin.use.2:
           children:
             makemeadmin.use.ui:
-            default: true
+            default: op
         makemeadmin.use.3:
           children:
             makemeadmin.use.ui:
-            default: true
+            default: op
         makemeadmin.use.4:
           children:
             makemeadmin.use.ui:
-            default: true
+            default: op
         makemeadmin.use.5:
           children:
             makemeadmin.use.ui:
-            default: true
+            default: op
         makemeadmin.use.about:
-          default: true
+          default: op
